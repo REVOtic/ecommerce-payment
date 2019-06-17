@@ -1,0 +1,6 @@
+<div class="browser"></div>
+
+<script>
+  const result = browserDetect();
+  document.getElementsByClassName('browser')[0].innerHTML = 'Name: ' + result['name'] + ' | Version: '+ result['version'];
+</script>
