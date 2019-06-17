@@ -1,0 +1,76 @@
+.dropdown-cart {
+  position: relative;
+  height: 40px;
+
+  .cart {
+    position: relative;
+    width: 50px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    z-index: 9999;
+    cursor: pointer;
+  }
+
+  .dropdown-cart-base {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    z-index: 9999;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3), -1px 1px 3px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.2s ease-in;
+
+    .product-lists{
+      height: 200px;
+      padding-top: 10px;
+
+      >p {
+        display: block;
+        position: relative;
+        height: auto;
+        overflow: auto;
+
+        >span {
+          padding: 10px;
+        }
+        >span:first-child {
+          float: left;
+        }
+        >span:last-child {
+          float: right;
+        }
+      }
+    }
+
+    .total-cost{
+      position: relative;
+      height: auto;
+      overflow: auto;
+      padding: 10px;
+      border-top: 1px solid #d7d7d7;
+      border-bottom: 1px solid #d7d7d7;
+
+      >span:first-child {
+        float: left;
+      }
+      >span:last-child {
+        float: right;
+      }
+    }
+
+    .checkout{
+      margin: 10px;
+    }
+  }
+
+  .dropdown-cart-base.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+  }
+}
