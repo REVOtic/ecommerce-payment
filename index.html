@@ -12,6 +12,7 @@
   <script src="assets/vendor/browser-detect/browser-detect.umd.min.js"></script>
 
   <link rel="stylesheet" href="assets/vendor/bootstrap/scss/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/icon/style.css">
   <link rel="stylesheet" href="assets/css/main.min.css">
 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png" />
@@ -57,8 +58,7 @@
             <a class="nav-link" href="#">Pricing</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Dropdown link
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -69,10 +69,21 @@
           </li>
         </ul>
       </div>
-      <form class="d-lg-block d-md-none d-sm-none d-none form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div class="dropdown-cart">
+        <div class="cart text-white">
+          <span class="icon icon-cart"></span>
+        </div>
+        <div class="dropdown-cart-base">
+          <div class="product-lists">
+
+          </div>
+          <div class="total-cost">
+            <span>Total ETH</span>
+            <span class="total-eth-value">0</span>
+          </div>
+          <button type="button" class="btn btn-info checkout" onClick="send_eth();">Checkout</button>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -80,6 +91,21 @@
 
   <div class="container">
     <div class="row">
+      <div class="col-12 pt-5 pb-2">
+        <div class="alert alert-danger hidden" role="alert" id="metamask-plugin-not-found">
+          Metamask browser extension not found!
+        </div>
+        <div class="alert alert-danger hidden" role="alert" id="metamask-no-access">
+          Unable to access metamask!
+        </div>
+        <div class="alert alert-danger hidden" role="alert" id="metamask-wrong-network">
+          Please select rinkeby test network!
+        </div>
+        <div class="alert alert-success hidden" role="alert" id="metamask-transaction-success">
+        </div>
+        <div class="alert alert-danger hidden" role="alert" id="metamask-transaction-failed">
+        </div>
+      </div>
 
       <div class="col-lg-4 col-md-4">
         <h1 class="my-4">Sidebar</h1>
@@ -89,33 +115,75 @@
           <a href="#" class="list-group-item">Category 3</a>
         </div>
       </div>
-      <!-- /.col-lg-3 -->
 
-      <div class="col-lg-4 col-md-4">
+
+      <div class="col-lg-4 col-md-4 product-item">
         <div class="card mt-4">
           <img class="card-img-top" src="http://placehold.it/300x200" alt="">
           <div class="card-body">
-            <h4 class="card-title">Product 1</h4>
+            <h4 class="card-title product-name">Product 1</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus
               neque sequi doloribus.</p>
+            <h5 class="mt-5 product-price" data-price="0.2">Price: 0.2 ETH</h5>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <div class="row">
+              <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+              </div>
+              <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                <form class="form-inline">
+          
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                    </div>
+                    <input type="text" class="form-control product-count" placeholder="0" aria-label="count" aria-describedby="product-count">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
 
-      <div class="col-lg-4 col-md-4">
+      <div class="col-lg-4 col-md-4 product-item">
         <div class="card mt-4">
           <img class="card-img-top" src="http://placehold.it/300x200" alt="">
           <div class="card-body">
-            <h4 class="card-title">Product 2</h4>
+            <h4 class="card-title product-name">Product 2</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus
               neque sequi doloribus.</p>
+            <h5 class="mt-5 product-price" data-price="0.2">Price: 0.4 ETH</h5>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <div class="row">
+              <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+              </div>
+              <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                <form class="form-inline">
+          
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                    </div>
+                    <input type="text" class="form-control product-count" placeholder="0" aria-label="count" aria-describedby="product-count">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -144,7 +212,9 @@
   <script src="assets/js/lib/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/lib/jarallax.min.js"></script>
-  <script src="assets/js/build/main.min.js"></script>
+  <script src="assets/js/lib/js.cookie.min.js"></script>
+  <script src="assets/js/build/metamask.js"></script>
+  <script src="assets/js/build/main.js"></script>
 </body>
 
 </html>
