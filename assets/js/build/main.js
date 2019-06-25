@@ -98,10 +98,34 @@ function open_cart(){
 
 
 
+function sidebar_nav(){
+  $('#all-items').on('click', function(){
+    $('.list-group-item').removeClass('active text-white');
+    $(this).addClass('active text-white');
+    $('.product-item').removeClass('hidden');
+  });
+  $('#utensils').on('click', function(){
+    $('.list-group-item').removeClass('active text-white');
+    $(this).addClass('active text-white');
+    $('.product-item').addClass('hidden');
+    $('.utensils').removeClass('hidden');
+  });
+  $('#electronics').on('click', function(){
+    $('.list-group-item').removeClass('active text-white');
+    $(this).addClass('active text-white');
+    $('.product-item').addClass('hidden');
+    $('.electronics').removeClass('hidden');
+  });
+}
+
+
+
+
 function functionSequence() {
   product_counter();
   add_to_cart();
   open_cart();
+  sidebar_nav();
 
   try { onstart_metamask() } catch (e) {}
 }

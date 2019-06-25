@@ -58,7 +58,8 @@
             <a class="nav-link" href="#">Pricing</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Dropdown link
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -107,83 +108,313 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-4">
-        <h1 class="my-4">Sidebar</h1>
+      <div class="col-lg-4 col-md-12">
+        <h1 class="my-4">Product Categories</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item active">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
+          <a id="all-items" class="list-group-item active">All Items</a>
+          <a id="utensils"  class="list-group-item">Utensils</a>
+          <a id="electronics" class="list-group-item">Electronics</a>
         </div>
       </div>
 
 
-      <div class="col-lg-4 col-md-4 product-item">
-        <div class="card mt-4">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-          <div class="card-body">
-            <h4 class="card-title product-name">Product 1</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus
-              neque sequi doloribus.</p>
-            <h5 class="mt-5 product-price" data-price="0.2">Price: 0.2 ETH</h5>
-          </div>
-          <div class="card-footer">
-            <div class="row">
-              <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
-                <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+      <div class="col-lg-8 col-md-12">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12 product-item utensils">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/utensils/p1.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">Pen</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 15/-</h5>
               </div>
-              <div class="col-lg-7 col-md-12 col-sm-7 col-12">
-                <form class="form-inline">
-          
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <button class="btn btn-outline-secondary add-product" type="button">+</button>
-                    </div>
-                    <input type="text" class="form-control product-count" placeholder="0" aria-label="count" aria-describedby="product-count">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary remove-product" type="button">-</button>
-                    </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
                   </div>
-                
-                </form>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
               </div>
             </div>
-
           </div>
-        </div>
-      </div>
 
-
-      <div class="col-lg-4 col-md-4 product-item">
-        <div class="card mt-4">
-          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-          <div class="card-body">
-            <h4 class="card-title product-name">Product 2</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus
-              neque sequi doloribus.</p>
-            <h5 class="mt-5 product-price" data-price="0.2">Price: 0.4 ETH</h5>
-          </div>
-          <div class="card-footer">
-            <div class="row">
-              <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
-                <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+          <div class="col-lg-6 col-md-6 col-12 product-item utensils">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/utensils/p2.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">Pencil</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 5/-</h5>
               </div>
-              <div class="col-lg-7 col-md-12 col-sm-7 col-12">
-                <form class="form-inline">
-          
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <button class="btn btn-outline-secondary add-product" type="button">+</button>
-                    </div>
-                    <input type="text" class="form-control product-count" placeholder="0" aria-label="count" aria-describedby="product-count">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary remove-product" type="button">-</button>
-                    </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
                   </div>
-                
-                </form>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
               </div>
             </div>
+          </div>
 
+          <div class="col-lg-6 col-md-6 col-12 product-item utensils">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/utensils/p3.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">NoteBook</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 50/-</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12 product-item utensils">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/utensils/p4.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">Eraser</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 5/-</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 col-md-6 col-12 product-item electronics">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/electronics/p5.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">HP Laptop</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 35,000/-</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12 product-item electronics">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/electronics/p6.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">Redmi Mobile</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 15,000/-</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12 product-item electronics">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/electronics/p7.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">Mac Book Pro</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 80,000/-</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12 product-item electronics">
+            <div class="card mt-4">
+              <img class="card-img-top" src="assets/media/products/electronics/p8.jpg" alt="" height="200px" width="300px">
+              <div class="card-body">
+                <h4 class="card-title product-name">Iphone X</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                  necessitatibus
+                  neque sequi doloribus.</p>
+                <h5 class="mt-5 product-price" data-price="0.2">Price: 70,000/-</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-lg-5 mb-sm-0 col-md-12 mb-md-2 col-sm-5 mb-sm-0 col-12 mb-2">
+                    <a href="#" class="btn btn-primary add-to-cart">Add to Cart</a>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-7 col-12">
+                    <form class="form-inline">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary add-product" type="button">+</button>
+                        </div>
+                        <input type="text" class="form-control product-count" placeholder="0" aria-label="count"
+                          aria-describedby="product-count">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary remove-product" type="button">-</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -202,8 +433,8 @@
           <small>Copyrighted 2019 ecommerce</small>
         </div>
         <div class="col-lg-6 col-md-6 text-right">
-            <small>Terms and Conditions</small>
-          </div>
+          <small>Terms and Conditions</small>
+        </div>
       </div>
     </div>
   </div>
